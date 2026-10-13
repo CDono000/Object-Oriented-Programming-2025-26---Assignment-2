@@ -1,0 +1,23 @@
+package org.uob.a2.engine;
+
+import org.uob.a2.*;
+import org.uob.a2.model.*;
+
+public class Name extends Consumer {
+
+     public Name(int number) {
+        super("Name"+number, resource, amount);
+    }
+
+    public void consume(Context ctx){
+        System.out.println("Consuming");
+    }
+
+    public void tick(Context ctx){
+        System.out.println("TICKING");
+    }
+
+    public String toCSV(){
+        return this.name+";"+this.consumedResource+";"+this.amount;
+    }
+}

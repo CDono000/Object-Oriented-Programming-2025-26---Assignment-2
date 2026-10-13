@@ -1,0 +1,22 @@
+package org.uob.a2.engine;
+
+import org.uob.a2.model.ResourceType;
+
+public class Name extends Producer{
+
+    public Name(int number){
+        super("Name"+number, RESOURCE, AMOUNT);
+    }
+
+    public void produce(Context ctx){
+        System.out.println("PRODUCING");
+    }
+
+    public String toCSV(){
+        return this.name+";RESOURCE;AMOUNT";
+    }
+
+    public void tick(Context ctx){
+        System.out.println("TICKING");
+    }
+}
